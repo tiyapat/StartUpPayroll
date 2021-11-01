@@ -1,26 +1,25 @@
 package com.company;
 
-public class Electricity implements IPayment{
+public class Rental implements IPayment{
     private String name;
-    private int unit;
+    private int monthly;
     private int rate;
 
-    public Electricity(String name, int unit, int rate) {
+    public Rental(String name, int monthly, int rate) {
         this.name = name;
-        this.unit = unit;
+        this.monthly = monthly;
         this.rate = rate;
     }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getUnit() {
-        return unit;
+    public int getMonthly() {
+        return monthly;
     }
 
-    public void setUnit(int unit) {
-        this.unit = unit;
+    public void setMonthly(int monthly) {
+        this.monthly = monthly;
     }
 
     public int getRate() {
@@ -33,7 +32,7 @@ public class Electricity implements IPayment{
 
     @Override
     public int getPayment() {
-        int payment = this.unit * this.rate;
+        int payment = this.monthly * this.rate;
         return payment;
     }
 
